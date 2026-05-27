@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio — Missions AP</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<aside>
+  <div class="avatar">WE</div><!-- MODIFIE : tes initiales -->
+  <div class="sidebar-name"></div>
+  <div class="sidebar-role"></div>
+
+  <nav>
+    <a href="index.html"><span class="icon">◈</span> Présentation</a>
+    <a href="cv.html"><span class="icon">◎</span> CV</a>
+    <a href="missions.html" class="active"><span class="icon">◇</span> Missions AP</a>
+    <a href="stage.html"><span class="icon">◉</span> Stage</a>
+  </nav>
+
+  <div class="sidebar-footer">
+    Portfolio de compétences<br>
+    2025 – 2026
+  </div>
+</aside>
+
+<main>
+  <div class="page-header">
+    <div class="dot-row"><div class="dot"></div><div class="dot"></div><div class="dot accent"></div></div>
+    <h2>Missions AP</h2>
+    <p>Semestre 1 - Semestre 2 — Activités professionnelles</p>
+  </div>
+
+  <!-- ══ MISSIONS ACCORDÉON ══ -->
+  <!-- MODIFIE : remplace les titres et le contenu de chaque mission -->
+
+  <div class="mission-card" onclick="toggleMission(this)">
+    <div class="mission-header">
+      <h3>Mission 1 — Semestre 1</h3>
+      <span class="mission-toggle">+</span>
+    </div>
+    <div class="mission-body">
+      <p>
+      Dans le cadre du contexte M2L (Maison des Ligues de Lorraine),
+      j'ai analysé l'infrastructure réseau d'un site composé de quatre
+      bâtiments hébergeant des ligues sportives régionales. Cette mission
+      m'a permis d'étudier l'organisation des baies de brassage, le câblage
+      réseau (catégorie 5 et 6), les équipements actifs (commutateurs, routeur)
+      ainsi que les services proposés aux utilisateurs : accès Internet mutualisé,
+      réseau Wifi, téléphonie IP, serveurs (DHCP, fichiers, impression, antiviral, NAS).  
+      </p>
+    </div>
+  </div>
+
+  <div class="mission-card" onclick="toggleMission(this)">
+    <div class="mission-header">
+      <h3>Mission 2 — Semestre 2</h3>
+      <span class="mission-toggle">+</span>
+    </div>
+    <div class="mission-body">
+      <p>
+      Dans le cadre du projet d'infrastructure Livresk, j'ai créé et configuré
+      deux machines virtuelles sur l'hyperviseur vCenter : un serveur GLPI sous
+      Debian 11 et un serveur Annuaire sous Windows Server 2016. Chaque VM a été
+      paramétrée avec une adresse IP fixe, un masque de sous-réseau et une
+      passerelle par défaut selon le plan d'adressage défini en Mission 1.
+      J'ai vérifié la connectivité entre les machines ainsi que l'accès à Internet
+      et la résolution DNS, garantissant le bon fonctionnement de la communication
+      TCP/IP au sein du sous-réseau serveur.
+    </p>
+    </div>
+  </div>
+
+  <!-- ══ TABLEAU DE COMPÉTENCES ══ -->
+  <div class="card" style="margin-top: 2.5rem;">
+    <div class="card-label">Tableau de compétences</div>
+    <div class="card-body">
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Compétence</th>
+              <th>Description / Activités</th>
+              <th>Niveau</th>
+              <th>Semestre</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- ══ MODIFIE : remplis chaque ligne avec tes compétences ══ -->
+            <tr>
+              <td>Compétence 1</td>
+              <td>Description de l'activité liée à cette compétence</td>
+              <td>En cours / Acquis</td>
+              <td>S1 / S2</td>
+            </tr>
+            <tr>
+              <td>Compétence 2</td>
+              <td>Description de l'activité liée à cette compétence</td>
+              <td>En cours / Acquis</td>
+              <td>S1 / S2</td>
+            </tr>
+            <tr>
+              <td>Compétence 3</td>
+              <td>Description de l'activité liée à cette compétence</td>
+              <td>En cours / Acquis</td>
+              <td>S1 / S2</td>
+            </tr>
+            <tr>
+              <td>Compétence 4</td>
+              <td>Description de l'activité liée à cette compétence</td>
+              <td>En cours / Acquis</td>
+              <td>S1 / S2</td>
+            </tr>
+            <tr>
+              <td>Compétence 5</td>
+              <td>Description de l'activité liée à cette compétence</td>
+              <td>En cours / Acquis</td>
+              <td>S1 / S2</td>
+            </tr>
+            <!-- MODIFIE : ajoute autant de <tr>...</tr> que nécessaire -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
