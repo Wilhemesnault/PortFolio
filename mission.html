@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mission — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ── PAGE MISSION : styles additionnels ── */
+
+    /* On réutilise la sidebar du site, même structure que les autres pages */
+
+    .mission-top-bar {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 2.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .mission-back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 400;
+      padding: 6px 12px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg3);
+      transition: all 0.2s;
+    }
+    .mission-back-btn:hover { color: var(--text); border-color: rgba(255,255,255,0.18); }
+    .mission-back-btn svg { width: 14px; height: 14px; flex-shrink: 0; }
+
+    .mission-breadcrumb {
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+    .mission-breadcrumb span { color: var(--muted2); }
+
+    /* Bannière image */
+    .mission-banner {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      border-radius: 14px;
+      margin-bottom: 2rem;
+      border: 1px solid var(--border);
+      display: block;
+      filter: grayscale(20%);
+    }
+
+    .mission-banner-placeholder {
+      width: 100%;
+      height: 200px;
+      background: var(--bg3);
+      border-radius: 14px;
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3.5rem;
+      border: 1px solid var(--border);
+    }
+
+    /* Tag */
+    .mission-tag-header {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 0.25rem 0.6rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Titre principal */
+    .mission-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 400;
+      color: var(--text);
+      line-height: 1.25;
+      margin-bottom: 0.75rem;
+    }
+
+    /* Intro */
+    .mission-intro {
+      font-size: 0.95rem;
+      color: var(--muted2);
+      line-height: 1.85;
+      margin-bottom: 2.5rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* ── BLOCS DE CONTENU ── */
+
+    .m-section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      font-weight: 400;
+      color: var(--text);
+      margin-bottom: 0.85rem;
+      margin-top: 2.25rem;
+    }
+
+    .m-text {
+      font-size: 0.92rem;
+      color: var(--muted2);
+      line-height: 1.9;
+      margin-bottom: 1.25rem;
+    }
+
+    .m-img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 1.5rem;
+      border: 1px solid var(--border);
+      display: block;
+    }
+
+    .m-list {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 1.5rem;
+    }
+    .m-list li {
+      font-size: 0.92rem;
+      color: var(--muted2);
+      line-height: 1.75;
+      padding-left: 1.25rem;
+      position: relative;
+      margin-bottom: 0.45rem;
+    }
+    .m-list li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 0.82rem;
+    }
+
+    .m-callout {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      padding: 1rem 1.25rem;
+      margin-bottom: 1.5rem;
+      font-size: 0.88rem;
+      color: var(--muted2);
+      line-height: 1.75;
+    }
+
+    .m-sep {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 2.5rem 0;
+    }
+
+    /* Animation d'entrée */
+    .mission-content {
+      animation: pageIn 0.35s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+  </style>
+</head>
+<body>
+
+<aside>
+  <div class="avatar">WE</div>
+  <div class="sidebar-name"></div>
+  <div class="sidebar-role"></div>
+
+  <nav>
+    <a href="index.html"><span class="icon">◈</span> Présentation</a>
+    <a href="cv.html"><span class="icon">◎</span> CV</a>
+    <a href="missions.html"><span class="icon">◇</span> Missions AP</a>
+    <a href="stage.html" class="active"><span class="icon">◉</span> Stage</a>
+  </nav>
+
+  <div class="sidebar-footer">
+    Portfolio de compétences<br>
+    2025 – 2026
+  </div>
+</aside>
+
+<main>
+
+  <!-- BARRE RETOUR -->
+  <div class="mission-top-bar">
+    <a href="stage.html" class="mission-back-btn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="15 18 9 12 15 6"/>
+      </svg>
+      Retour
+    </a>
+    <div class="mission-breadcrumb">Stage / <span id="page-breadcrumb">Mission</span></div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       MISSION 1 — Infrastructure Réseau
+  ══════════════════════════════════════ -->
+  <div class="mission-content" id="mission-s1" style="display:none">
+    <span class="mission-tag-header">Catégorie</span>
+    <img class="mission-banner" src="IMG/Infrastructure Réseau et Périmétrique.png" alt="Infrastructure Réseau">
+    <h1 class="mission-title">Infrastructure Réseau et Périmétrique</h1>
+    <p class="mission-intro">Cette mission traite de la mise en place de la fondation et de la sécurité du réseau. (VM Proxmox)</p>
+
+    <h2 class="m-section-title">Objectifs</h2>
+    <p class="m-text">Déployer l'infrastructure réseau de base et un système de stockage centralisé pour sécuriser les flux de données et assurer la disponibilité des services partagés.</p>
+
+    <h2 class="m-section-title">Installation et configuration de pfSense</h2>
+    <ul class="m-list">
+      <li>Rôle du pare-feu, J'ai installé pfSense pour servir de routeur et de pare-feu principal. Son rôle est de filtrer tout ce qui entre et sort de l'infrastructure pour protéger le réseau interne contre les menaces extérieures.</li>
+      <li>Configuration réseau, J'ai configuré deux interfaces réseau distinctes : l'une pour l'accès à Internet (WAN) et l'autre pour le réseau interne (LAN). Cela permet de créer une séparation nette entre le monde extérieur et les machines virtuelles de l'entreprise.</li>
+      <li>Gestion du trafic, J'ai défini les règles de base pour que les machines virtuelles puissent communiquer entre elles et accéder à Internet, tout en contrôlant les accès pour maintenir la sécurité.</li>
+    </ul>
+
+    <h2 class="m-section-title">Mise en place du NAS avec TrueNAS</h2>
+    <ul class="m-list">
+      <li>Création du serveur de stockage, J'ai installé TrueNAS sur une machine virtuelle dédiée. Ce serveur centralise tous les fichiers de l'entreprise afin de faciliter leur partage et leur sauvegarde.</li>
+      <li>Gestion des volumes, J'ai configuré un système de stockage sécurisé (ZFS). J'ai créé des dossiers partagés spécifiques (comme "Scan", "RH" et "Compta") pour que chaque service puisse enregistrer et retrouver ses documents facilement.</li>
+      <li>Accès aux données, J'ai paramétré les permissions et l'adresse IP du serveur pour qu'il soit accessible par tous les autres serveurs du réseau, assurant ainsi une centralisation efficace des données.</li>
+    </ul>
+
+    <!--<img class="m-img" src="IMG/ton-image.png" alt="Description">-->
+  </div>
+
+  <!-- ══════════════════════════════════════
+       MISSION 2 — Active Directory
+  ══════════════════════════════════════ -->
+  <div class="mission-content" id="mission-s2" style="display:none">
+    <span class="mission-tag-header">Catégorie</span>
+    <img class="mission-banner" src="IMG/Services d'Annuaire et Gestion des Identités (Active Directory).png" alt="Active Directory">
+    <h1 class="mission-title">Services d'Annuaire et Gestion des Identités (Active Directory)</h1>
+    <p class="mission-intro">Cette mission se concentre sur l'administration système et la gestion du parc utilisateur. (VM Proxmox)</p>
+
+    <h2 class="m-section-title">Objectifs</h2>
+    <p class="m-text">Mettre en place une architecture centralisée pour gérer les comptes des utilisateurs, sécuriser leurs postes de travail et automatiser l'accès aux ressources partagées de l'entreprise.</p>
+
+    <h2 class="m-section-title">Installation et réplication de l'Active Directory</h2>
+    <ul class="m-list">
+      <li>Création du domaine, J'ai installé le rôle "Active Directory" sur un serveur Windows pour créer le cœur de l'annuaire. Cela me permet de gérer tous les utilisateurs et les ordinateurs depuis un seul point de contrôle.</li>
+      <li>Haute disponibilité, Pour éviter toute panne, j'ai installé un second serveur Windows que j'ai ajouté au domaine. J'ai configuré la réplication pour que les deux serveurs possèdent exactement les mêmes informations. Si l'un des deux tombe en panne, le second prend automatiquement le relais sans interrompre le travail des utilisateurs.</li>
+    </ul>
+
+    <h2 class="m-section-title">Configuration des services DHCP et DNS</h2>
+    <ul class="m-list">
+      <li>Gestion des adresses IP (DHCP), J'ai configuré le rôle DHCP sur mes serveurs pour qu'ils distribuent automatiquement les adresses IP aux ordinateurs dès qu'ils se connectent au réseau. J'ai mis en place un système de bascule pour garantir que ce service reste toujours disponible.</li>
+      <li>Résolution de noms (DNS), J'ai installé le service DNS pour que les ordinateurs puissent se retrouver entre eux en utilisant des noms simples plutôt que des adresses IP complexes. Comme pour l'Active Directory, j'ai synchronisé ce service entre mes deux serveurs pour assurer la continuité du réseau.</li>
+    </ul>
+
+    <h2 class="m-section-title">Déploiement des GPO et gestion des ressources</h2>
+    <ul class="m-list">
+      <li>Politiques de sécurité (GPO), J'ai créé des "GPO" (stratégies de groupe) pour appliquer des règles automatiques sur tous les ordinateurs : imposer un fond d'écran spécifique, limiter l'accès au panneau de configuration pour éviter les mauvaises manipulations et obliger les utilisateurs à renouveler leur mot de passe régulièrement pour renforcer la sécurité.</li>
+      <li>Accès aux dossiers (Lecteurs réseaux), J'ai automatisé l'affichage des lecteurs réseaux (Scan, RH, Compta) sur les sessions des utilisateurs grâce aux GPO. Ainsi, chaque employé trouve directement ses dossiers de travail au bon endroit dès qu'il ouvre sa session.</li>
+      <li>Installation de logiciels, J'ai également utilisé les GPO pour déployer automatiquement des logiciels sur tous les postes du parc. Cela m'a évité d'avoir à installer chaque programme manuellement sur chaque machine.</li>
+    </ul>
+    
+    <!--<img class="m-img" src="IMG/ton-image.png" alt="Description">-->
+  </div>
+
+  <!-- ══════════════════════════════════════
+       MISSION 3 — Gestion Parc / ITSM
+  ══════════════════════════════════════ -->
+  <div class="mission-content" id="mission-s3" style="display:none">
+    <span class="mission-tag-header">Catégorie</span>
+    <img class="mission-banner" src="IMG/Gestion du Parc Informatique et Support (ITSM).png" alt="Gestion Parc">
+    <h1 class="mission-title">Gestion du Parc Informatique et Support (ITSM)</h1>
+    <p class="mission-intro">Cette mission montre le rôle dans la maintenance et l'organisation du SI. (VM Proxmox)</p>
+
+    <h2 class="m-section-title">Objectifs</h2>
+    <p class="m-text">Mise en place d'une solution de gestion de parc et de support technique pour assurer le suivi, l'inventaire et la maintenance proactive des équipements informatiques.</p>
+
+    <h2 class="m-section-title">Installation et configuration de GLPI</h2>
+    <ul class="m-list">
+      <li>Installation du système serveur, J'ai préparé un serveur sous Linux pour accueillir l'application de gestion. Pour que cela fonctionne, j'ai installé et configuré ce qu'on appelle une "pile logicielle" (LAMP: L= Linux; A= Apache; M= MariaDB; P= PHP ). Concrètement, cela signifie que j'ai installé le serveur Web (pour afficher les pages), la base de données (pour stocker les informations du parc) et le langage PHP (qui permet à l'application de fonctionner).</li>
+      <li>Mise en service de GLPI, Une fois le serveur prêt, j'ai installé GLPI dessus. J'ai ensuite configuré l'interface pour qu'elle soit prête à recevoir les inventaires des ordinateurs et les tickets d'incidents signalés par les employés.</li>
+    </ul>
+
+    <h2 class="m-section-title">Synchronisation avec l'Active Directory</h2>
+    <ul class="m-list">
+      <li>Connexion entre les serveurs, Pour ne pas avoir à créer manuellement chaque compte utilisateur dans GLPI, j'ai créé une passerelle sécurisée entre le serveur GLPI et l'Active Directory (qui gère déjà tous les comptes de l'entreprise).</li>
+      <li>Automatisation, Grâce à cette liaison, le serveur GLPI va chercher automatiquement les noms et informations des utilisateurs dans l'Active Directory. Ainsi, lorsqu'un utilisateur se connecte à GLPI pour faire une demande d'assistance, il utilise directement ses identifiants habituels du domaine.</li>
+    </ul>
+  
+    <!--<img class="m-img" src="IMG/ton-image.png" alt="Description">-->    
+  </div>
+
+  <!-- ══════════════════════════════════════
+       MISSION 4 — Supervision / Sauvegarde
+  ══════════════════════════════════════ -->
+  <div class="mission-content" id="mission-s4" style="display:none">
+    <span class="mission-tag-header">Catégorie</span>
+    <img class="mission-banner" src="IMG/Supervision, Sauvegarde et Continuité de service.png" alt="Supervision">
+    <h1 class="mission-title">Supervision, Sauvegarde et Continuité de service</h1>
+    <p class="mission-intro">Cette mission démontre la capacité à maintenir le système opérationnel et sécurisé. (VM Proxmox)</p>
+
+    <h2 class="m-section-title">Objectifs</h2>
+    <p class="m-text">Assurer la surveillance en temps réel de l'état de santé du parc informatique, protéger les données de l'entreprise contre toute perte accidentelle.</p>
+
+    <h2 class="m-section-title">Supervision avec Zabbix</h2>
+    <ul class="m-list">
+      <li>Installation du serveur de surveillance, J'ai mis en place le logiciel Zabbix sur un nouveau serveur Linux pour surveiller l'activité de tout le réseau. Cela permet d'être alerté immédiatement si une machine tombe en panne ou si un disque dur arrive à saturation.</li>
+      <li>Déploiement des agents, Pour que le serveur Zabbix puisse "voir" ce qu'il se passe sur les autres machines, j'ai installé des petits programmes appelés "agents Zabbix" sur chaque serveur (Windows et Linux). Ces agents transmettent en permanence des informations au serveur principal, comme l'utilisation du processeur, de la mémoire ou l'espace de stockage disponible.</li>
+    </ul>
+
+    <h2 class="m-section-title">Sauvegarde avec Veeam</h2>
+    <ul class="m-list">
+      <li>Mise en place de la stratégie de sauvegarde, J'ai dédié une machine virtuelle Windows spécifiquement à l'utilisation du logiciel Veeam. Ce serveur a pour rôle unique de réaliser des copies complètes et de sécurisées toutes les autres machines virtuelles de l'infrastructure.</li>
+      <li>Continuité de service, En cas de problème grave sur le réseau ou sur un serveur (panne matérielle, erreur humaine), cette solution me permet de restaurer rapidement les serveurs et les fichiers importants à un état antérieur, évitant ainsi une interruption prolongée de l'activité.</li>
+    </ul>
+
+    <h2 class="m-section-title">Administration distante et sécurité (SSH)</h2>
+    <ul class="m-list">
+      <li>Accès sécurisé aux serveurs Linux, Pour administrer mes serveurs Linux sans avoir à être physiquement devant la console, j'ai configuré un service SSH. Cela me permet de me connecter à distance de manière totalement sécurisée et chiffrée pour effectuer des commandes de maintenance ou des mises à jour depuis n'importe quel poste du réseau.</li>
+    </ul>
+
+    <!--<img class="m-img" src="IMG/ton-image.png" alt="Description">-->    
+  </div>
+
+  <!-- ══════════════════════════════════════
+       MISSION 5 — Services Web
+  ══════════════════════════════════════ -->
+  <div class="mission-content" id="mission-s5" style="display:none">
+    <span class="mission-tag-header">Catégorie</span>
+    <img class="mission-banner" src="IMG/Services Web et Hébergement.png" alt="Services Web">
+    <h1 class="mission-title">Services Web et Hébergement</h1>
+    <p class="mission-intro">Installation et configuration de WordPress sur environnement Linux. (VM Proxmox)</p>
+
+    <h2 class="m-section-title">Objectifs</h2>
+    <p class="m-text">Mettre en place un serveur Web pour héberger un site vitrine ou une plateforme collaborative, en assurant sa bonne configuration et sa disponibilité au sein du réseau local.</p>
+
+    <h2 class="m-section-title">Installation et configuration de WordPress</h2>
+    <ul class="m-list">
+      <li>Préparation de l'environnement, Comme pour mon serveur de gestion, j'ai installé sur une machine Linux une pile logicielle (serveur Web, base de données et langage PHP). C'est indispensable pour que le logiciel WordPress puisse "tourner" et afficher des pages web.</li>
+      <li>Installation de WordPress, J'ai ensuite installé WordPress, qui est un outil de gestion de contenu. Cela permet de créer facilement des pages, des articles ou des fonctionnalités de site web sans avoir à tout programmer manuellement.</li>
+      <li>Configuration du site, J'ai finalisé les réglages du site pour qu'il soit accessible sur le réseau. Cela inclut le paramétrage de la connexion entre le site web et sa base de données, ainsi que la configuration des options de base pour rendre le site fonctionnel.</li>
+    </ul>
+
+    <!--<img class="m-img" src="IMG/ton-image.png" alt="Description">-->    
+  </div>
+
+</main>
+
+<script>
+  (function() {
+    var params = new URLSearchParams(window.location.search);
+    var id = params.get('id') || 's1';
+    var el = document.getElementById('mission-' + id);
+
+    var titles = {
+      's1': 'Infrastructure Réseau et Périmétrique',
+      's2': 'Active Directory',
+      's3': 'Gestion du Parc / ITSM',
+      's4': 'Supervision & Sauvegarde',
+      's5': 'Services Web et Hébergement'
+    };
+
+    if (el) {
+      el.style.display = 'block';
+      document.title = (titles[id] || 'Mission') + ' — Portfolio';
+      document.getElementById('page-breadcrumb').textContent = titles[id] || 'Mission';
+    } else {
+      var fallback = document.getElementById('mission-s1');
+      if (fallback) fallback.style.display = 'block';
+    }
+  })();
+</script>
+<script src="script.js"></script>
+</body>
+</html>
