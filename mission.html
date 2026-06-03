@@ -226,6 +226,8 @@
       <li>Gestion du trafic, J'ai défini les règles de base pour que les machines virtuelles puissent communiquer entre elles et accéder à Internet, tout en contrôlant les accès pour maintenir la sécurité.</li>
     </ul>
 
+    <img class="m-img" src="IMG/PfSense.png" alt="Description">
+
     <h2 class="m-section-title">Mise en place du NAS avec TrueNAS</h2>
     <ul class="m-list">
       <li>Création du serveur de stockage, J'ai installé TrueNAS sur une machine virtuelle dédiée. Ce serveur centralise tous les fichiers de l'entreprise afin de faciliter leur partage et leur sauvegarde.</li>
@@ -233,7 +235,7 @@
       <li>Accès aux données, J'ai paramétré les permissions et l'adresse IP du serveur pour qu'il soit accessible par tous les autres serveurs du réseau, assurant ainsi une centralisation efficace des données.</li>
     </ul>
 
-    <!--<img class="m-img" src="IMG/ton-image.png" alt="Description">-->
+    <img class="m-img" src="IMG/TrueNAS.png" alt="Description">
   </div>
 
   <!-- ══════════════════════════════════════
@@ -254,11 +256,15 @@
       <li>Haute disponibilité, Pour éviter toute panne, j'ai installé un second serveur Windows que j'ai ajouté au domaine. J'ai configuré la réplication pour que les deux serveurs possèdent exactement les mêmes informations. Si l'un des deux tombe en panne, le second prend automatiquement le relais sans interrompre le travail des utilisateurs.</li>
     </ul>
 
+    <img class="m-img" src="IMG/AD.png" alt="Description">
+
     <h2 class="m-section-title">Configuration des services DHCP et DNS</h2>
     <ul class="m-list">
       <li>Gestion des adresses IP (DHCP), J'ai configuré le rôle DHCP sur mes serveurs pour qu'ils distribuent automatiquement les adresses IP aux ordinateurs dès qu'ils se connectent au réseau. J'ai mis en place un système de bascule pour garantir que ce service reste toujours disponible.</li>
       <li>Résolution de noms (DNS), J'ai installé le service DNS pour que les ordinateurs puissent se retrouver entre eux en utilisant des noms simples plutôt que des adresses IP complexes. Comme pour l'Active Directory, j'ai synchronisé ce service entre mes deux serveurs pour assurer la continuité du réseau.</li>
     </ul>
+
+    <img class="m-img" src="IMG/DHCP_DNS.png" alt="Description">
 
     <h2 class="m-section-title">Déploiement des GPO et gestion des ressources</h2>
     <ul class="m-list">
@@ -267,7 +273,7 @@
       <li>Installation de logiciels, J'ai également utilisé les GPO pour déployer automatiquement des logiciels sur tous les postes du parc. Cela m'a évité d'avoir à installer chaque programme manuellement sur chaque machine.</li>
     </ul>
     
-    <!--<img class="m-img" src="IMG/ton-image.png" alt="Description">-->
+    <img class="m-img" src="IMG/GPO.png" alt="Description">
   </div>
 
   <!-- ══════════════════════════════════════
@@ -288,13 +294,15 @@
       <li>Mise en service de GLPI, Une fois le serveur prêt, j'ai installé GLPI dessus. J'ai ensuite configuré l'interface pour qu'elle soit prête à recevoir les inventaires des ordinateurs et les tickets d'incidents signalés par les employés.</li>
     </ul>
 
+    <img class="m-img" src="IMG/GLPI.png" alt="Description">
+
     <h2 class="m-section-title">Synchronisation avec l'Active Directory</h2>
     <ul class="m-list">
       <li>Connexion entre les serveurs, Pour ne pas avoir à créer manuellement chaque compte utilisateur dans GLPI, j'ai créé une passerelle sécurisée entre le serveur GLPI et l'Active Directory (qui gère déjà tous les comptes de l'entreprise).</li>
       <li>Automatisation, Grâce à cette liaison, le serveur GLPI va chercher automatiquement les noms et informations des utilisateurs dans l'Active Directory. Ainsi, lorsqu'un utilisateur se connecte à GLPI pour faire une demande d'assistance, il utilise directement ses identifiants habituels du domaine.</li>
     </ul>
   
-    <!--<img class="m-img" src="IMG/ton-image.png" alt="Description">-->    
+    <img class="m-img" src="IMG/GLPI_AD.png" alt="Description">  
   </div>
 
   <!-- ══════════════════════════════════════
@@ -315,18 +323,22 @@
       <li>Déploiement des agents, Pour que le serveur Zabbix puisse "voir" ce qu'il se passe sur les autres machines, j'ai installé des petits programmes appelés "agents Zabbix" sur chaque serveur (Windows et Linux). Ces agents transmettent en permanence des informations au serveur principal, comme l'utilisation du processeur, de la mémoire ou l'espace de stockage disponible.</li>
     </ul>
 
+    <img class="m-img" src="IMG/Zabbix.png" alt="Description">  
+
     <h2 class="m-section-title">Sauvegarde avec Veeam</h2>
     <ul class="m-list">
       <li>Mise en place de la stratégie de sauvegarde, J'ai dédié une machine virtuelle Windows spécifiquement à l'utilisation du logiciel Veeam. Ce serveur a pour rôle unique de réaliser des copies complètes et de sécurisées toutes les autres machines virtuelles de l'infrastructure.</li>
       <li>Continuité de service, En cas de problème grave sur le réseau ou sur un serveur (panne matérielle, erreur humaine), cette solution me permet de restaurer rapidement les serveurs et les fichiers importants à un état antérieur, évitant ainsi une interruption prolongée de l'activité.</li>
     </ul>
 
+    <!-- <img class="m-img" src="IMG/ton-image.png" alt="Description">  -->
+
     <h2 class="m-section-title">Administration distante et sécurité (SSH)</h2>
     <ul class="m-list">
       <li>Accès sécurisé aux serveurs Linux, Pour administrer mes serveurs Linux sans avoir à être physiquement devant la console, j'ai configuré un service SSH. Cela me permet de me connecter à distance de manière totalement sécurisée et chiffrée pour effectuer des commandes de maintenance ou des mises à jour depuis n'importe quel poste du réseau.</li>
     </ul>
 
-    <!--<img class="m-img" src="IMG/ton-image.png" alt="Description">-->    
+    <img class="m-img" src="IMG/SSH.png" alt="Description">  
   </div>
 
   <!-- ══════════════════════════════════════
@@ -348,7 +360,7 @@
       <li>Configuration du site, J'ai finalisé les réglages du site pour qu'il soit accessible sur le réseau. Cela inclut le paramétrage de la connexion entre le site web et sa base de données, ainsi que la configuration des options de base pour rendre le site fonctionnel.</li>
     </ul>
 
-    <!--<img class="m-img" src="IMG/ton-image.png" alt="Description">-->    
+    <img class="m-img" src="IMG/Wordpress.png" alt="Description">   
   </div>
 
 </main>
